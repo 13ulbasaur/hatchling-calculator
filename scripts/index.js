@@ -1,5 +1,10 @@
 $(document).ready(function(){
-  $("h1").click(function(){
-    $(this).hide();
+  $("#btnRun").click(function(){
+      $(this).hide();
+      $.ajax({
+          url: "https://randomzack.twiggies.workers.dev/", success: function (result) {
+              $("#zackTime").src(result);
+          }
+      });
   });
 });
