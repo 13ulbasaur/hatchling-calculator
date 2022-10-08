@@ -1,5 +1,8 @@
 $(document).ready(function () {
     $("#btnRun").click(function () {
+$.getJSON('http://www.whateverorigin.org/get?url=' + encodeURIComponent('https://flightrising.com/includes/ol/scryer_bloodlines.php?id1=1&id2=2',) + '&callback=?', function(data){
+	alert(data.contents);
+});
 $.ajax({
   url: 'https://flightrising.com/includes/ol/scryer_bloodlines.php?id1=1&id2=2', ,
   dataType: "jsonp",
